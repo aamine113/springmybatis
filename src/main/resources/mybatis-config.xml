@@ -3,15 +3,21 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <typeAliases>
+        <typeAlias type="uk.co.tutorial.entity.Employee" alias="employee"/>
+    </typeAliases>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC" />
             <dataSource type="POOLED">
                 <property name="driver" value="com.microsoft.sqlserver"/>
-                <property name="url" value=""/>
-                <property name="username" value=""/>
-                <property name="password" value=""/>
+                <property name="url" value="jdbc:sqlserver://LAPTOP-9CJ1M16B/springmybatis"/>
+                <property name="username" value="springuser"/>
+                <property name="password" value="springuser"/>
             </dataSource>
         </environment>
     </environments>
+    <mappers>
+        <mapper resource="uk/co/tutorial/dao/EmployeeMapper.xml"/>
+    </mappers>
 </configuration>

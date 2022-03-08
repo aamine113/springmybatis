@@ -10,7 +10,12 @@
     <h2>Add employee !</h2>
 
     <form:form modelAttribute="employee" action="saveProcess">
+        <!-- For ticking checkboxes purpose -->
         <input id="hiddenTxt" type="hidden" value="${employee.hobbies}" />
+
+        <!-- To determine whether we update or insert -->
+        <form:hidden id="employeeId" path="id" />
+
         Employee Fullname : <form:input path="fullname"/><br/><br/>
 
         Employee Email : <form:input path="email"/><br/><br/>

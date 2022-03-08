@@ -38,7 +38,12 @@ public class EmployeeController {
     @RequestMapping("/saveProcess")
     public String saveProcess(@ModelAttribute Employee employee) {
         try {
-            employeeService.insertEmployee(employee);
+            if (employee.getId() == null) {
+                employeeService.insertEmployee(employee);
+            }
+            else {
+                employeeService.updateEmployee(employee);
+            }
             return "redirect:/";
         }
         catch (Exception e) {

@@ -30,4 +30,6 @@ public class EmployeeService {
         return employeeMapper.getEmployee(employeeId);
     }
 
+    public void updateEmployee(Employee employee) { employeeMapper.updateEmployee(employee); }
+
 }

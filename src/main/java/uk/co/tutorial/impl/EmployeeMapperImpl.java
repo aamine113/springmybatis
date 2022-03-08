@@ -63,4 +63,17 @@ public class EmployeeMapperImpl implements EmployeeMapper {
         }
         return null;
     }
+
+    @Override
+    public void updateEmployee(Employee employee) {
+        try {
+            SqlSession sqlSession = MyBatisUtil.getSqlSessionFactory().openSession();
+            sqlSession.update("updateEmployee", employee);
+            sqlSession.commit();
+            sqlSession.close();
+        }
+        catch (Exception e) {
+            System.out.println("Error occured when updating employee : " + e);
+        }
+    }
 }

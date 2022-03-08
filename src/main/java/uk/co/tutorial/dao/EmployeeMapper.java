@@ -16,5 +16,6 @@ public interface EmployeeMapper {
 
     public Employee getEmployee(int employeeId);
 
+    public void updateEmployee(Employee employee);
 
 }

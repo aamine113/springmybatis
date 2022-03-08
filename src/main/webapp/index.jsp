@@ -4,6 +4,7 @@
 <title>Welcome</title>
 </head>
 <body>
-    <h2>Hello !</h2>
+    <h2>Hello !</h2> </br></br>
+    <button onClick="window.location.href='getEmployees.html'">Show employees</button>
 </body>
 </html>

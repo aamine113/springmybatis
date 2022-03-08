@@ -14,7 +14,7 @@ public class MyBatisUtil {
     static {
         Reader reader;
         try {
-            reader = Resources.getResourceAsReader("resources/mybatis-config.xml");
+            reader = Resources.getResourceAsReader("mybatis-config.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
         }
         catch (IOException e) {
@@ -22,7 +22,7 @@ public class MyBatisUtil {
         }
     }
 
-    public SqlSessionFactory getSqlSessionFactory() {
+    public static SqlSessionFactory getSqlSessionFactory() {
         return sqlSessionFactory;
     }
 }
